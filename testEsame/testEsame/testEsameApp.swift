@@ -15,3 +15,7 @@ struct testEsameApp: App {
         }
     }
 }
+
+#Preview {
+    ContentView()
+}
