@@ -24,6 +24,54 @@ struct TitleView: View {
     }
 }
 
+struct ButtonRecipeView: View{
+    var name: String
+    var difficulty: String
+    var time: String
+    var nation: String
+    
+    var body: some View {
+        Button(action:{}){
+            HStack{
+                //Image("Vetri neri")
+                //.frame(width: 100, height: 100)
+                Rectangle()
+                    .frame(width: 150, height: 140)
+                    .cornerRadius(20)
+                    .padding(10)
+                    .shadow(color: .blue,radius: 10)
+                VStack{
+                    Text(name)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .font(.title)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Text("Difficoltà: \(difficulty)")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    HStack{
+                        Image(systemName: "timer")
+                        Text(time)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    Text(nation)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    
+                }
+                .padding(.trailing)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                
+            }
+            
+            
+            
+            
+        }
+        .background(.white)
+        .cornerRadius(20)
+        .padding(10)
+    }
+}
+
 
 struct ContentView: View {
     var body: some View {
@@ -47,44 +95,7 @@ struct ContentView: View {
             ScrollView(.horizontal, showsIndicators: false){
                 
                 HStack{
-                    Button(action:{}){
-                        HStack{
-                            //Image("Vetri neri")
-                            //.frame(width: 100, height: 100)
-                            Rectangle()
-                                .frame(width: 150, height: 140)
-                                .cornerRadius(20)
-                                .padding(10)
-                                .shadow(color: .blue,radius: 10)
-                            VStack{
-                                Text("Pizza")
-                                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                                    .font(.title)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                Text("Difficoltà: Facile")
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                HStack{
-                                    Image(systemName: "timer")
-                                    Text(":20-30 min")
-                                }
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                Text("Italy")
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                
-                                
-                            }
-                            .padding(.trailing)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            
-                        }
-                        
-                        
-                        
-                        
-                    }
-                    .background(.white)
-                    .cornerRadius(20)
-                    .padding(10)
+                    ButtonRecipeView(name: "Pasta al ragù", difficulty: "Facile", time: "60 min", nation: "Italia")
                     Button(action:{}){
                         HStack{
                             //Image("Vetri neri")
