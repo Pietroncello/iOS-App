@@ -15,9 +15,9 @@ struct TitleView: View {
     
     var body: some View {
         HStack {
-            Text(title)
+            Text("\(title):")
                 .font(.largeTitle)
-                .padding(15)
+                .padding([.leading],15)
             Spacer()
         }
         
@@ -38,12 +38,15 @@ struct ButtonRecipeView: View{
                     .frame(width: 150, height: 140)
                     .cornerRadius(20)
                     .padding(10)
-                    .shadow(color: .blue,radius: 10)
-                VStack{
+                    .shadow(color: .blue,radius: 5)
+                VStack(alignment: .leading){
                     Text(name)
                         .fontWeight(.bold)
                         .font(.title)
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .lineLimit(2, reservesSpace: true)
+                        .fixedSize(horizontal: false, vertical: true)
+                    
                     Text("Difficoltà: \(difficulty)")
                         .frame(maxWidth: .infinity, alignment: .leading)
                     HStack{
@@ -57,7 +60,7 @@ struct ButtonRecipeView: View{
                     
                 }
                 .padding(.trailing)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(maxWidth: 150)
                 
             }
             
@@ -73,7 +76,8 @@ struct ButtonRecipeView: View{
 
 struct ContentView: View {
     var body: some View {
-        ScrollView {
+        ZStack() {
+        ScrollView(showsIndicators:false) {
             Button(action: {}) {
                 HStack{
                     Text("Cerca la ricetta in base al paese")
@@ -89,21 +93,57 @@ struct ContentView: View {
             .padding(.horizontal)
             .font(.title)
             .fontWeight(.semibold)
-            TitleView(title: "Ultimi cercati:")
+            TitleView(title: "Ultimi cercati")
             ScrollView(.horizontal, showsIndicators: false){
-                
+                HStack{
+                    ButtonRecipeView(name: "Pasta al ragù", difficulty: "Facile", time: "60 min", nation: "Italy")
+                    ButtonRecipeView(name: "Pizza", difficulty: "Facile", time: "60 min", nation: "Italy")
+                    
+                }
+            }
+            TitleView(title: "Preferiti")
+            ScrollView(.horizontal, showsIndicators: false){
                 HStack{
                     ButtonRecipeView(name: "Pasta al ragù", difficulty: "Facile", time: "60 min", nation: "Italy")
                     ButtonRecipeView(name: "Pasta al ragù", difficulty: "Facile", time: "60 min", nation: "Italy")
                     
                 }
-                
             }
-            
-            
-            
+            TitleView(title: "Preferiti")
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack{
+                    ButtonRecipeView(name: "Pasta al ragù", difficulty: "Facile", time: "60 min", nation: "Italy")
+                    ButtonRecipeView(name: "Pasta al ragù", difficulty: "Facile", time: "60 min", nation: "Italy")
+                    
+                }
+            }
         }
         .background(backgroundColor)
+        HStack{
+            
+            Spacer()
+            Button(action: {}){
+                Image(systemName: "house.circle")
+                    .font(.largeTitle)
+            }
+            Spacer()
+            Button(action: {}){
+                Image(systemName: "plus.circle")
+                    .font(.custom("String", size: 50))
+            }
+            Spacer()
+            Button(action: {}){
+                Image(systemName: "person.crop.circle")
+                    .font(.largeTitle)
+            }
+            Spacer()
+            
+        }
+        .frame(width: 300, height: 70)
+        .cornerRadius(20)
+        .padding(0)
+        .background(Color.orange)
+        .foregroundColor(.white)
         
     }
 }
