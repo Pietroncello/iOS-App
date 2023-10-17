@@ -77,6 +77,27 @@ struct ButtonRecipeView: View{
 struct ContentView: View {
     var body: some View {
         ZStack() {
+            TabView {
+                HomePageView()
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                            .font(.custom("String", size: 50))
+                    }
+                
+                AddRecipeView()
+                    .tabItem {
+                        Image(systemName: "plus.circle")
+                            .font(.custom("String", size: 50))
+                        
+                    }
+                Text("Profile Tab")
+                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                    .tabItem {
+                        Image(systemName: "person.crop.circle")
+                            .font(.custom("String", size: 50))
+                    }
+            }
+            
             
         }
         
