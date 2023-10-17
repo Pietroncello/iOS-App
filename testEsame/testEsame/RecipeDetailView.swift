@@ -9,7 +9,10 @@ import SwiftUI
 
 struct RecipeDetailView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image("pizza-marg")
+            .resizable()
+            .scaledToFit()
+        Spacer()
     }
 }
 

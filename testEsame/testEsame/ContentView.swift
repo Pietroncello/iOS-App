@@ -77,77 +77,12 @@ struct ButtonRecipeView: View{
 struct ContentView: View {
     var body: some View {
         ZStack() {
-        ScrollView(showsIndicators:false) {
-            Button(action: {}) {
-                HStack{
-                    Text("Cerca la ricetta in base al paese")
-                        .padding(.horizontal)
-                    Image(systemName: "globe.europe.africa.fill")
-                        .font(.largeTitle)
-                    
-                }.padding()
-            }
-            .foregroundColor(Color.white)
-            .background(Color.purple)
-            .cornerRadius(30)
-            .padding(.horizontal)
-            .font(.title)
-            .fontWeight(.semibold)
-            TitleView(title: "Ultimi cercati")
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack{
-                    ButtonRecipeView(name: "Pasta al ragù", difficulty: "Facile", time: "60 min", nation: "Italy")
-                    ButtonRecipeView(name: "Pizza", difficulty: "Facile", time: "60 min", nation: "Italy")
-                    
-                }
-            }
-            TitleView(title: "Preferiti")
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack{
-                    ButtonRecipeView(name: "Pasta al ragù", difficulty: "Facile", time: "60 min", nation: "Italy")
-                    ButtonRecipeView(name: "Pasta al ragù", difficulty: "Facile", time: "60 min", nation: "Italy")
-                    
-                }
-            }
-            TitleView(title: "Preferiti")
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack{
-                    ButtonRecipeView(name: "Pasta al ragù", difficulty: "Facile", time: "60 min", nation: "Italy")
-                    ButtonRecipeView(name: "Pasta al ragù", difficulty: "Facile", time: "60 min", nation: "Italy")
-                    
-                }
-            }
-        }
-        .background(backgroundColor)
-        HStack{
-            
-            Spacer()
-            Button(action: {}){
-                Image(systemName: "house.circle")
-                    .font(.largeTitle)
-            }
-            Spacer()
-            Button(action: {}){
-                Image(systemName: "plus.circle")
-                    .font(.custom("String", size: 50))
-            }
-            Spacer()
-            Button(action: {}){
-                Image(systemName: "person.crop.circle")
-                    .font(.largeTitle)
-            }
-            Spacer()
             
         }
-        .frame(width: 300, height: 70)
-        .cornerRadius(20)
-        .padding(0)
-        .background(Color.orange)
-        .foregroundColor(.white)
         
     }
+    
 }
-
 #Preview {
     ContentView()
 }

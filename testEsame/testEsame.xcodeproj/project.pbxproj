@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1E35482ADE8C3A00C604DB /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1E35472ADE8C3A00C604DB /* HomePageView.swift */; };
+		3E6ADAD32ADDD7BF00A372CD /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6ADAD22ADDD7BF00A372CD /* TabBar.swift */; };
 		3E75CA472ACF000E00460E58 /* testEsameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75CA462ACF000E00460E58 /* testEsameApp.swift */; };
 		3E75CA492ACF000E00460E58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75CA482ACF000E00460E58 /* ContentView.swift */; };
 		3E75CA4B2ACF001000460E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E75CA4A2ACF001000460E58 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E1E35472ADE8C3A00C604DB /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		3E6ADAD22ADDD7BF00A372CD /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		3E75CA432ACF000E00460E58 /* testEsame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testEsame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E75CA462ACF000E00460E58 /* testEsameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testEsameApp.swift; sourceTree = "<group>"; };
 		3E75CA482ACF000E00460E58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 				3E75CA482ACF000E00460E58 /* ContentView.swift */,
 				3E75CA4A2ACF001000460E58 /* Assets.xcassets */,
 				3E75CA4C2ACF001000460E58 /* Preview Content */,
+				3E6ADAD22ADDD7BF00A372CD /* TabBar.swift */,
+				3E1E35472ADE8C3A00C604DB /* HomePageView.swift */,
 			);
 			path = testEsame;
 			sourceTree = "<group>";
@@ -143,6 +149,8 @@
 				3E75CA492ACF000E00460E58 /* ContentView.swift in Sources */,
 				965D596B2ADAE7EC00D6B819 /* RecipeDetailView.swift in Sources */,
 				3E75CA472ACF000E00460E58 /* testEsameApp.swift in Sources */,
+				3E6ADAD32ADDD7BF00A372CD /* TabBar.swift in Sources */,
+				3E1E35482ADE8C3A00C604DB /* HomePageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
